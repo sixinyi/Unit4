@@ -1,3 +1,4 @@
+// 11.15 Bruce this is about a lot of program in one
 import java.util.Scanner;
 
 public class WhileLoop {
