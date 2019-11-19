@@ -1,9 +1,9 @@
 // 11.15 Bruce this is about a lot of program in one
 import java.util.Scanner;
 
-public class WhileLoop {
+public class WhileLoops {
 
-    static Scanner scan = new Scanner(System.in);
+    static Scanner input = new Scanner(System.in);
     public static void main(String[] args) {
 
     }
@@ -12,11 +12,11 @@ public class WhileLoop {
         int num = nums;
         String result = "";
 
-        if (nums >= nume)
+        if (nums > nume)
             return "Invalid input";
         else
             while (num <= nume) {
-                result = num + " ";
+                result += num + " ";
                 num++;
             }
         return result;
@@ -32,8 +32,7 @@ public class WhileLoop {
         }
         return "The factors of "+num+" are: "+output;
     }
-    public static void countPosAndNeg(){
-        Scanner input = new Scanner(System.in);
+    public static String countPosAndNeg(){
         int number = 1, p = 0, n = 0;
         if (number > 0)
         while ((number > 0)||(number < 0)) {
@@ -44,10 +43,9 @@ public class WhileLoop {
             if (number < 0)
                 n ++ ;
             }
-        System.out.print("There were "+p+" positive and "+n+" negative numbers.");
+       return "There were "+p+" positive and "+n+" negative numbers.";
     }
-    public static void findMinAndMax(){
-        Scanner input = new Scanner(System.in);
+    public static String findMinAndMax(){
         int count = 0;
         int min = Integer.MAX_VALUE, max = Integer.MIN_VALUE;
 
@@ -60,30 +58,33 @@ public class WhileLoop {
                 min = number ;
             count++;
         }
-        System.out.println("Max value is: "+max);
-        System.out.print("Min value is: "+min);
+        return "Max value is: "+max+"\nMin value is: "+min;
     }
-    public static void gradePoint(){
-        Scanner input = new Scanner(System.in);
+    public static double gradePoint(){
         int loop = 0;
+        String score = "";
         double Score = 0.0;
+        double grade = 0;
         System.out.println("Enter seven letter grades (A, B, C, D, or F)");
+
         while (loop < 7){
-            String grade = input.next();
-            if (grade.equals("A"))
-                Score += 4.0;
-            else if (grade.equals("B"))
-                Score += 3.0;
-            else if (grade.equals("C"))
-                Score += 2.0;
-            else if (grade.equals("D"))
-                Score += 1.0;
-            else if (grade.equals("F"))
-                Score += 0.0;
+            score = input.next();
+            if (score.equals("A"))
+                Score = 4.0;
+            else if (score.equals("B"))
+                Score = 3.0;
+            else if (score.equals("C"))
+                Score = 2.0;
+            else if (score.equals("D"))
+                Score = 1.0;
+            else if (score.equals("F"))
+                Score = 0.0;
+            grade += Score  ;
+
             loop ++;
         }
-        double mean = (int)(Score*100/7+0.5);
+        double mean = (int)(grade*100/7+0.5);
         double GPA = mean/100;
-        System.out.print("GPA = "+GPA);
+        return GPA;
     }
 }
