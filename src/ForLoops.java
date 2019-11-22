@@ -5,44 +5,44 @@ public class ForLoops {
     static Scanner input = new Scanner(System.in);
 
     public static String printingHashTags(int number){
-        String outcome = "";
+        String answer = "";
 
         for (int tag = 1; tag <= number; tag++){
-            outcome += "#";
+            answer += "#";
         }
-        return outcome;
+        return answer;
     }
 
     public static String countDown(int n1, int n2){
-        String outcome = "";
+        String answer = "";
 
         if (n1 == n2)
-            outcome = String.valueOf(n2)+" ";
+            answer = String.valueOf(n2)+" ";
 
         else if (n1<n2){
             for(int number = n2; number >=n1; number--)
-                outcome += number + " ";
+                answer += number + " ";
         }
 
         else
-            outcome = "";
+            answer = "";
 
-        return outcome;
+        return answer;
     }
 
     public static String countDown2(int n1, int n2){
-        String outcome = "";
+        String answer = "";
         if (n1<n2){
             for(int number = n2; number >=n1; number--){
-                outcome += number + " ";
+                answer += number + " ";
             }}
         else if (n1>n2){
             for(int number = n1; number >=n2; number--){
-                outcome += number + " ";
+                answer += number + " ";
             }}
         else
-            outcome = String.valueOf(n2)+" ";
-        return outcome;
+            answer = String.valueOf(n2)+" ";
+        return answer;
     }
 
     public static int sumNumbers(int n1, int n2){
