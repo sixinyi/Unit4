@@ -1,3 +1,4 @@
+// Bruce 11/22 StringProblems
 public class StringProblems {
     public static String printTheLetters(String words) {
         String answer = "";
