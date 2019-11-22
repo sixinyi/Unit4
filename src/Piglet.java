@@ -1,4 +1,4 @@
-// Bruce 11/19 piglet
+// Bruce 11/22 piglet. User is expected to type in "y" or "n".
 import java.util.Scanner;
 
 public class Piglet {
@@ -7,14 +7,15 @@ public class Piglet {
         Scanner input = new Scanner(System.in);
         System.out.println("Welcome to Piglet!");
         int out = 0;
-        String userAnswer = "yes";
+        String userAnswer = "y";
 
-        while (userAnswer.equals("yes")) {
-            int Ro = (int) (Math.random() * 6);
+        while (userAnswer.equals("y")) {
+            int Ro = (int) (Math.random() * 6) + 1;
 
-            if (Ro == 0) {
+            if (Ro == 1) {
                 out = 0;
                 System.out.println("You rolled a 1!");
+                userAnswer = "n";
                 return "You got 0 points.";
             }
 

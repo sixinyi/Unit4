@@ -41,7 +41,7 @@ public class ForLoops {
                 answer += number + " ";
             }}
         else
-            answer = String.valueOf(n2)+" ";
+            answer = n2+" ";
         return answer;
     }
 
